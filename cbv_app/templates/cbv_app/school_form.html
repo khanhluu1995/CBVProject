@@ -1,0 +1,18 @@
+{% extends 'cbv_app/layout_cbv_app.html' %}
+{% block body_block %}
+    <div class="jumbotron">
+        <h1>
+            {% if not form.instance.pk %}
+                Creating a School:
+            {% else %}
+                Updating School Info:
+            {% endif %}
+        </h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" class="btn btn-primary" value="submit">
+            <a href="{% url 'cbv_app:list' %}" class="button">Cancel</a>
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Layout</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="navbar-nav">
+        <a class="navbar-brand" href="{% url 'cbv_app:list' %}">Schools</a>
+        <a class="navbar-brand" href="{% url 'cbv_app:detail' %}">School Details</a>
+        <a class="nav-item nav-link" href="{% url 'admin:index' %}">Admin</a>
+{#        <a class="nav-item nav-link" href="{% url 'my_simple_website:register' %}">Register</a>#}
+    </div>
+</nav>
+
+</nav>
+<div class="select2-container">
+{% block body_block %}
+
+{% endblock %}
+</div>
+</body>
+</html>
